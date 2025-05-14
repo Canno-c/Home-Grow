@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home Grow Essentials</title>
+  <title>Grow Gear Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    /* Reset and base styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -18,22 +21,20 @@
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
       color: #222;
-      line-height: 1.6;
     }
 
     @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
+      0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     header {
-      background: rgba(255, 255, 255, 0.9);
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
 
     nav {
@@ -47,19 +48,19 @@
     }
 
     nav a {
-      text-decoration: none;
-      color: #444;
       margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
       font-weight: bold;
     }
 
     .hero {
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
@@ -69,17 +70,17 @@
     }
 
     .hero a {
+      padding: 0.8rem 1.5rem;
       background: #28a745;
       color: white;
-      padding: 0.75rem 1.5rem;
       text-decoration: none;
       border-radius: 8px;
+      transition: 0.3s;
       font-weight: bold;
-      transition: background 0.3s ease;
     }
 
     .hero a:hover {
-      background: #218838;
+      background: #1f7d36;
     }
 
     .products {
@@ -96,12 +97,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
-      text-align: center;
       transition: transform 0.3s ease;
     }
 
     .product:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .product img {
@@ -113,27 +113,97 @@
     .product h3 {
       margin: 1rem 0 0.5rem;
       font-size: 1.1rem;
+      padding: 0 1rem;
     }
 
     .product a {
       display: block;
+      padding: 0.75rem;
       background: #007bff;
       color: white;
-      padding: 0.5rem;
+      text-align: center;
       text-decoration: none;
+      font-weight: bold;
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      font-weight: bold;
+    }
+
+    .testimonial-section {
+      background: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      margin-bottom: 2rem;
+    }
+
+    .testimonial {
+      max-width: 800px;
+      margin: auto;
+      font-style: italic;
+    }
+
+    .cta {
+      background: #ffc107;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta a {
+      background: #222;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
     }
 
     footer {
-      text-align: center;
       padding: 2rem;
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(0,0,0,0.05);
+      text-align: center;
       font-size: 0.9rem;
     }
 
+    .socials i {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      color: #444;
+      transition: 0.3s;
+    }
+
+    .socials i:hover {
+      color: #007bff;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+
+    #backToTop:hover {
+      background: #1f7d36;
+    }
+
     @media (max-width: 600px) {
+      nav a {
+        margin-left: 0.5rem;
+      }
+
       .hero h2 {
         font-size: 2rem;
       }
@@ -144,40 +214,66 @@
 
   <header>
     <nav>
-      <h1>Grow Gear Hub 🌿</h1>
+      <h1>Grow Gear Hub 🌱</h1>
       <div>
         <a href="#products">Products</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Top-Rated Home Grow Equipment</h2>
-    <p>Everything you need to start your indoor cannabis grow — lights, tents, tools, and more.</p>
-    <a href="#products">Browse Gear</a>
+    <h2>Your Home Grow Starts Here</h2>
+    <p>Hand-picked gear to grow indoors like a pro. Simple. Reliable. Affordable.</p>
+    <a href="#products">Shop Now</a>
   </section>
 
   <section id="products" class="products">
-    <!-- Example Product -->
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1616627981393-420e3d9ae2cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnwx&ixlib=rb-4.0.3&q=80&w=600" alt="Grow Tent">
+      <img src="https://images.unsplash.com/photo-1616627981393-420e3d9ae2cf?auto=format&fit=crop&w=800&q=80" alt="Grow Tent">
       <h3>2x4 Grow Tent Kit</h3>
       <a href="https://www.amazon.com/dp/YOURAFFILIATEID" target="_blank">View on Amazon</a>
     </div>
-
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1616627838276-4be2182ad104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnwx&ixlib=rb-4.0.3&q=80&w=600" alt="LED Grow Light">
+      <img src="https://images.unsplash.com/photo-1616627838276-4be2182ad104?auto=format&fit=crop&w=800&q=80" alt="LED Grow Light">
       <h3>Full Spectrum LED Light</h3>
       <a href="https://www.amazon.com/dp/YOURAFFILIATEID" target="_blank">View on Amazon</a>
     </div>
+    <!-- Add more as needed -->
+  </section>
 
-    <!-- Add more products as needed -->
+  <section id="testimonials" class="testimonial-section">
+    <h2>What Growers Are Saying</h2>
+    <p class="testimonial">"Started my first grow with the tent and light from here. Best investment ever. Super simple setup and great yields!" – Jake R.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Want Our Full Beginner Grow Checklist?</h2>
+    <p><a href="/checklist.pdf" download>Download Now</a></p>
   </section>
 
   <footer id="contact">
-    <p>© 2025 Grow Gear Hub. Affiliate links may earn us commission at no extra cost to you.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2025 Grow Gear Hub. Affiliate links may earn us a small commission.</p>
   </footer>
+
+  <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById("backToTop");
+      if (window.scrollY > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
 </html>
