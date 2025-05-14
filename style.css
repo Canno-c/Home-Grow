@@ -225,3 +225,102 @@ footer {
   color: #aaa;
 }
 
+.contact-wrapper {
+  background: linear-gradient(to right, #f4f9f4, #e1f7e7);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.input-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-grid input {
+  flex: 1 1 45%;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+.contact-card button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-card button:hover {
+  background: #1f7d36;
+}
+
+/* Responsive fix */
+@media (max-width: 600px) {
+  .input-grid {
+    flex-direction: column;
+  }
+}
+
+/* Dark mode */
+.dark-mode .contact-wrapper {
+  background: linear-gradient(to right, #181818, #222);
+}
+
+.dark-mode .contact-card {
+  background: rgba(30, 30, 30, 0.95);
+  color: #eee;
+}
+
+.dark-mode .contact-card input,
+.dark-mode .contact-card textarea {
+  background: #2b2b2b;
+  color: #eee;
+  border-color: #444;
+}
+
+.dark-mode .contact-card p {
+  color: #aaa;
+}
+
