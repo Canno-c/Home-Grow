@@ -112,7 +112,6 @@ footer {
   width: 100%;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .contact-box h2 {
@@ -139,7 +138,8 @@ footer {
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 1rem;
-  transition: border 0.3s ease;
+  transition: border-color 0.3s ease;
+  width: 100%;
 }
 
 .contact-box input:focus,
@@ -157,14 +157,14 @@ footer {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .contact-box button:hover {
   background-color: #1f7d36;
 }
 
-/* Mobile-first: everything stacks automatically */
+/* Responsive adjustments */
 @media (max-width: 600px) {
   .contact-box {
     padding: 2rem 1.5rem;
