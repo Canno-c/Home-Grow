@@ -113,3 +113,41 @@ footer {
   background: #444;
 }
 
+.contact-form {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f1f1f1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dark-mode .contact-form {
+  background: #1e1e1e;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background: #2e2e2e;
+  color: #eee;
+  border: 1px solid #555;
+}
+
