@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Grow Essentials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #e1f7e7, #c8f0f5, #d0f0de, #f4f9f4);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      background: #28a745;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #218838;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .product a {
+      display: block;
+      background: #007bff;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Grow Gear Hub 🌿</h1>
+      <div>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Top-Rated Home Grow Equipment</h2>
+    <p>Everything you need to start your indoor cannabis grow — lights, tents, tools, and more.</p>
+    <a href="#products">Browse Gear</a>
+  </section>
+
+  <section id="products" class="products">
+    <!-- Example Product -->
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1616627981393-420e3d9ae2cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnwx&ixlib=rb-4.0.3&q=80&w=600" alt="Grow Tent">
+      <h3>2x4 Grow Tent Kit</h3>
+      <a href="https://www.amazon.com/dp/YOURAFFILIATEID" target="_blank">View on Amazon</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1616627838276-4be2182ad104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnwx&ixlib=rb-4.0.3&q=80&w=600" alt="LED Grow Light">
+      <h3>Full Spectrum LED Light</h3>
+      <a href="https://www.amazon.com/dp/YOURAFFILIATEID" target="_blank">View on Amazon</a>
+    </div>
+
+    <!-- Add more products as needed -->
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Grow Gear Hub. Affiliate links may earn us commission at no extra cost to you.</p>
+  </footer>
+
+</body>
+</html>
