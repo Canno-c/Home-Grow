@@ -307,4 +307,17 @@ nav a {
   color: #666;
   margin-left: 6px;
 }
+.hero-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
