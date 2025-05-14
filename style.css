@@ -66,23 +66,26 @@ nav a {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
 .product {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
-  transform: scale(1.04);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
@@ -92,22 +95,30 @@ nav a {
 }
 
 .product h3 {
-  margin: 1rem 0 0.5rem;
   font-size: 1.1rem;
-  padding: 0 1rem;
+  padding: 1rem;
+  margin: 0;
+  color: #222;
 }
 
 .product a {
+  margin-top: auto;
   display: block;
-  padding: 0.75rem;
+  padding: 0.9rem 1.5rem;
   background: #007bff;
   color: white;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: background 0.3s ease;
 }
+
+.product a:hover {
+  background: #0056b3;
+}
+
 
 .blog-section {
   padding: 4rem 2rem;
