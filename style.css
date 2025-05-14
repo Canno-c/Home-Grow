@@ -88,3 +88,28 @@ footer {
 .dark-mode header, .dark-mode footer {
   background: #1e1e1e;
 }
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .testimonial-section,
+.dark-mode .cta {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .product {
+  background: #222;
+  color: #eee;
+}
+
+.dark-mode .product a {
+  background: #0a84ff;
+}
+
+.dark-mode .cta a {
+  background: #444;
+}
+
