@@ -279,3 +279,9 @@ nav a {
   right: 10px;
 }
 
+.rating-count {
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: 6px;
+}
+
