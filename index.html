@@ -133,7 +133,7 @@
     const btn = document.getElementById("backToTop");
     btn.style.display = window.scrollY > 300 ? 'block' : 'none';
   });
-<script>
+</script>
   document.getElementById('darkToggle').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
   });
@@ -155,30 +155,33 @@
   window.addEventListener('load', revealOnScroll);
 </script>
   <script>
-  const form = document.getElementById('contactForm');
-  const thankYouMessage = document.getElementById('thankYouMessage');
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById('contactForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-    const formData = new FormData(form);
-    const action = form.getAttribute("action");
+      const formData = new FormData(form);
+      const action = form.getAttribute("action");
 
-    try {
-      await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        await fetch(action, {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      form.reset();
-      form.style.display = "none";
-      thankYouMessage.style.display = "block";
-    } catch (error) {
-      alert("Something went wrong. Please try again.");
-    }
+        form.reset();
+        form.style.display = "none";
+        thankYouMessage.style.display = "block";
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+      }
+    });
   });
 </script>
+
 
 </body>
 </html>
