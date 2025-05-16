@@ -224,14 +224,13 @@ nav a {
 }
 
 .contact-box {
-  background: #ffffff;
-  max-width: 600px;
-  width: 100%;
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Other existing styles */
 }
+
 
 .contact-box h2 {
   font-size: 2rem;
