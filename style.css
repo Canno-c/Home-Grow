@@ -412,10 +412,11 @@ nav a {
   transform: translateY(0);
 }
 
-.dark-mode body {
+body.dark-mode {
   background: #121212;
   color: #eee;
 }
+
 
 .dark-mode .product,
 .dark-mode .contact-box,
