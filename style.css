@@ -500,3 +500,7 @@ body.dark-mode {
   }
 }
 
+body, .product, .contact-box, .blog-card {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
