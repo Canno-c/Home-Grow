@@ -439,3 +439,70 @@ nav a {
   color: #58a6ff;
 }
 
+@media (max-width: 768px) {
+  header, .hero, .products, .blog-section, .testimonial-section, .contact-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .product img {
+    height: 180px;
+  }
+
+  .product h3 {
+    font-size: 1rem;
+  }
+
+  .blog-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .blog-card p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  .contact-box {
+    padding: 2rem 1rem;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contact-box button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .socials i {
+    font-size: 1.1rem;
+  }
+}
+
