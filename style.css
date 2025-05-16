@@ -334,3 +334,23 @@ nav a {
   transform: translateY(0);
 }
 
+.dark-mode body {
+  background: #121212;
+  color: #eee;
+}
+
+.dark-mode .product,
+.dark-mode .contact-box,
+.dark-mode .blog-card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(to right, #1f1f1f, #2b2b2b);
+}
+
+.dark-mode a {
+  color: #58a6ff;
+}
+
