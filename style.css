@@ -213,23 +213,27 @@ nav a {
 
 .contact-section {
   width: 100%;
-  min-height: 100vh;
   padding: 6rem 2rem;
+  background: linear-gradient(to bottom right, #f4f9f4, #d0f0de);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #f4f9f4, #d0f0de);
   position: relative;
   z-index: 1;
 }
 
+
 .contact-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Other existing styles */
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto;
 }
+
 
 
 .contact-box h2 {
